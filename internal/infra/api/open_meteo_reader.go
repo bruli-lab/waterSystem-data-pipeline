@@ -124,5 +124,5 @@ func (o OpenMeteoReader) Read(ctx context.Context, slot *forecast.Slot) ([]*fore
 }
 
 func NewOpenMeteoReader() *OpenMeteoReader {
-	return &OpenMeteoReader{client: &http.Client{Timeout: 10 * time.Second}}
+	return &OpenMeteoReader{client: &http.Client{Timeout: 20 * time.Second}}
 }

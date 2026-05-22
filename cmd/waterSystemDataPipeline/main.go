@@ -139,7 +139,11 @@ func recurrentForecast(ctx context.Context, ch <-chan struct{}, pred *forecast.P
 			log.InfoContext(ctx, "Recurrent forecast stopped")
 			return
 
-		case <-ch:
+		case _, ok := <-ch:
+			if !ok {
+				log.InfoContext(ctx, "Recurrent forecast channel closed")
+				return
+			}
 			log.InfoContext(ctx, "Recurrent forecast started...")
 			ticker := time.NewTicker(30 * time.Minute)
 
@@ -158,6 +162,7 @@ func recurrentForecast(ctx context.Context, ch <-chan struct{}, pred *forecast.P
 					}
 
 					log.InfoContext(ctx, "Recurrent forecast prediction finished")
+					ticker.Stop()
 				}
 			}
 		}
@@ -166,7 +171,7 @@ func recurrentForecast(ctx context.Context, ch <-chan struct{}, pred *forecast.P
 
 func forecastCron(ctx context.Context, c *cron.Cron, pred *forecast.Prediction, log *slog.Logger, ch chan<- struct{}) error {
 	defer c.Stop()
-	_, err := c.AddFunc("* 7 * * *", func() {
+	_, err := c.AddFunc("30 8 * * *", func() {
 		if err := pred.Get(ctx, forecast.Tomorrow()); err != nil {
 			log.ErrorContext(ctx, "Error getting forecast", "err", err)
 			ch <- struct{}{}
