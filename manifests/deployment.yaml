@@ -1,7 +1,6 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  namespace: watersystem-data-pipeline
   labels:
     app: watersystem-data-pipeline
   name: watersystem-data-pipeline
@@ -10,7 +9,6 @@ spec:
   selector:
     matchLabels:
       app: watersystem-data-pipeline
-  strategy: {}
   template:
     metadata:
       labels:
@@ -20,8 +18,8 @@ spec:
       imagePullSecrets:
         - name: ghcr-login
       containers:
-        - image: ghcr.io/bruli/watersystem-data-pipeline:0.12.3
-          name: watersystem-data-pipeline
+        - name: watersystem-data-pipeline
+          image: ghcr.io/bruli/watersystem-data-pipeline:v1.1.2
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
