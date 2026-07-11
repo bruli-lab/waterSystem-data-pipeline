@@ -5,8 +5,8 @@ package api_test
 import (
 	"testing"
 
-	"github.com/bruli/waterSystem-data-pipeline/internal/domain/forecast"
-	apiinfra "github.com/bruli/waterSystem-data-pipeline/internal/infra/api"
+	"github.com/bruli-lab/waterSystem-data-pipeline/internal/domain/forecast"
+	apiinfra "github.com/bruli-lab/waterSystem-data-pipeline/internal/infra/api"
 	"github.com/stretchr/testify/require"
 )
 

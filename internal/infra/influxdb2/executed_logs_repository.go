@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/bruli/waterSystem-data-pipeline/internal/domain/executed_logs"
+	executedlogs "github.com/bruli-lab/waterSystem-data-pipeline/internal/domain/executed_logs"
 	influxdb "github.com/influxdata/influxdb-client-go/v2"
 	"github.com/influxdata/influxdb-client-go/v2/api/write"
 	"go.opentelemetry.io/otel/codes"

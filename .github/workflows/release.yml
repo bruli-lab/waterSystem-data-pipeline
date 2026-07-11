@@ -93,14 +93,14 @@ jobs:
           platforms: linux/arm64
           push: true
           tags: |
-            ghcr.io/bruli/watersystem-data-pipeline:v${{ needs.release.outputs.version }}
-            ghcr.io/bruli/watersystem-data-pipeline:latest
+            ghcr.io/bruli-lab/watersystem-data-pipeline:v${{ needs.release.outputs.version }}
+            ghcr.io/bruli-lab/watersystem-data-pipeline:latest
 
       - name: Update deployment image tag
         run: |
           VERSION=v${{ needs.release.outputs.version }}
 
-          sed -i "s|ghcr.io/bruli/watersystem-data-pipeline:.*|ghcr.io/bruli/watersystem-data-pipeline:${VERSION}|g" "${{ env.DEPLOYMENT_FILE }}"
+          sed -i "s|ghcr.io/bruli-lab/watersystem-data-pipeline:.*|ghcr.io/bruli-lab/watersystem-data-pipeline:${VERSION}|g" "${{ env.DEPLOYMENT_FILE }}"
 
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"

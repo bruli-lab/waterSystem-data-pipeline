@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"log/slog"
 
-	"github.com/bruli/waterSystem-data-pipeline/internal/domain/executed_logs"
+	"github.com/bruli-lab/waterSystem-data-pipeline/internal/domain/executed_logs"
 	"github.com/nats-io/nats.go/jetstream"
 	"go.opentelemetry.io/otel/codes"
 	"go.opentelemetry.io/otel/trace"

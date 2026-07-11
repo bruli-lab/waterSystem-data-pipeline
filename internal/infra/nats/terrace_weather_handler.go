@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"log/slog"
 
-	"github.com/bruli/waterSystem-data-pipeline/internal/domain/terrace_weather"
+	"github.com/bruli-lab/waterSystem-data-pipeline/internal/domain/terrace_weather"
 	"github.com/nats-io/nats.go/jetstream"
 	"go.opentelemetry.io/otel/codes"
 	"go.opentelemetry.io/otel/trace"

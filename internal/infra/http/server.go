@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/bruli/waterSystem-data-pipeline/internal/domain/forecast"
+	"github.com/bruli-lab/waterSystem-data-pipeline/internal/domain/forecast"
 )
 
 const (

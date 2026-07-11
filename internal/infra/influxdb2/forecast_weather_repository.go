@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/bruli/waterSystem-data-pipeline/internal/domain/forecast"
+	"github.com/bruli-lab/waterSystem-data-pipeline/internal/domain/forecast"
 	influxdb "github.com/influxdata/influxdb-client-go/v2"
 	"github.com/influxdata/influxdb-client-go/v2/api/write"
 )

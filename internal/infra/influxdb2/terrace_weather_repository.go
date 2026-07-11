@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/bruli/waterSystem-data-pipeline/internal/domain/terrace_weather"
+	"github.com/bruli-lab/waterSystem-data-pipeline/internal/domain/terrace_weather"
 	influxdb "github.com/influxdata/influxdb-client-go/v2"
 	"github.com/influxdata/influxdb-client-go/v2/api/write"
 	"go.opentelemetry.io/otel/codes"
