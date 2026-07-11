@@ -1,6 +1,6 @@
 module github.com/bruli-lab/waterSystem-data-pipeline
 
-go 1.26.4
+go 1.26.5
 
 require (
 	github.com/bruli-lab/go-core v1.7.0
