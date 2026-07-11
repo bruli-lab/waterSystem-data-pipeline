@@ -173,7 +173,7 @@ jobs:
 
       - name: Install Trivy
         env:
-          TRIVY_VERSION: "0.69.3"
+          TRIVY_VERSION: "0.72.0"
         run: |
           set -euo pipefail
 

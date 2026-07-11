@@ -4,10 +4,6 @@ vars:
   APP: 'watersystem-data-pipeline'
   DOCKER_COMPOSE: 'COMPOSE_BAKE=true docker compose'
   DOCKERFILE: 'Dockerfile'
-  IMAGE_REG: 'ghcr.io/bruli-lab'
-  IMAGE_NAME: '{{.IMAGE_REG}}/{{.APP}}'
-  VERSION: '0.12.3'
-  CURRENT_IMAGE: '{{.IMAGE_NAME}}:{{.VERSION}}'
   GOLANGCI_LINT_VERSION: 'v2.11.4'
 
 silent: false
@@ -146,24 +142,3 @@ tasks:
         rm -rf bin dist coverage .*cache || true
         go clean -testcache
 
-  docker-login:
-    desc: Login to Docker registry
-    cmds:
-      - |
-        echo "🔐 Logging into Docker registry..."
-        echo "$CR_PAT" | docker login ghcr.io -u bruli --password-stdin
-
-  docker-push-image:
-    desc: Build and push Docker image
-    deps:
-      - docker-login
-    cmds:
-      - |
-        echo "🐳 Building and pushing Docker image {{.CURRENT_IMAGE}} ..."
-        docker buildx build \
-          --platform linux/arm64 \
-          -t {{.CURRENT_IMAGE}} \
-          -f {{.DOCKERFILE}} \
-          --push \
-          .
-        echo "✅ Image {{.CURRENT_IMAGE}} pushed successfully."
