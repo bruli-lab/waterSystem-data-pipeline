@@ -4,7 +4,7 @@ go 1.26.5
 
 require (
 	github.com/bruli-lab/go-core v1.7.0
-	github.com/caarlos0/env/v11 v11.4.0
+	github.com/caarlos0/env/v11 v11.4.1
 	github.com/influxdata/influxdb-client-go/v2 v2.14.0
 	github.com/nats-io/nats.go v1.50.0
 	github.com/robfig/cron/v3 v3.0.1
