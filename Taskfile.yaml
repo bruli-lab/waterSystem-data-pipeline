@@ -4,7 +4,7 @@ vars:
   APP: 'watersystem-data-pipeline'
   DOCKER_COMPOSE: 'COMPOSE_BAKE=true docker compose'
   DOCKERFILE: 'Dockerfile'
-  GOLANGCI_LINT_VERSION: 'v2.11.4'
+  GOLANGCI_LINT_VERSION: 'v2.12.2'
 
 silent: false
 
