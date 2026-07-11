@@ -33,7 +33,7 @@ RUN --mount=type=cache,target=/root/.cache/go-build \
 ############################
 # Etapa runtime
 ############################
-FROM alpine:3.22
+FROM alpine:3.24
 
 ARG APP_UID=10001
 ARG APP_GID=10001
