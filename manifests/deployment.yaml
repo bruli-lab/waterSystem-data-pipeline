@@ -33,7 +33,7 @@ spec:
 
       containers:
         - name: watersystem-data-pipeline
-          image: ghcr.io/bruli-lab/watersystem-data-pipeline:v1.4.0
+          image: ghcr.io/bruli-lab/watersystem-data-pipeline:v1.4.1
           imagePullPolicy: IfNotPresent
 
           securityContext:
