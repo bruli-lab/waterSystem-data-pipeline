@@ -6,7 +6,7 @@ require (
 	github.com/bruli-lab/go-core v1.7.0
 	github.com/caarlos0/env/v11 v11.4.1
 	github.com/influxdata/influxdb-client-go/v2 v2.14.0
-	github.com/nats-io/nats.go v1.50.0
+	github.com/nats-io/nats.go v1.52.0
 	github.com/robfig/cron/v3 v3.0.1
 	github.com/stretchr/testify v1.11.1
 	go.opentelemetry.io/otel v1.44.0
