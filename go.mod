@@ -1,9 +1,9 @@
 module github.com/bruli-lab/waterSystem-data-pipeline
 
-go 1.27.2
+go 1.27.4
 
 require (
-	github.com/bruli-lab/go-core v1.8.0
+	github.com/bruli-lab/go-core v1.10.0
 	github.com/caarlos0/env/v11 v11.4.2
 	github.com/influxdata/influxdb-client-go/v2 v2.14.0
 	github.com/nats-io/nats.go v1.55.0
