@@ -48,7 +48,7 @@ services:
         - ./scripts:/scripts
 
   influxdb:
-    image: influxdb:2.9
+    image: influxdb:2.10
     container_name: influxdb
     ports:
       - "8086:8086"
